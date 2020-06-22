@@ -1,0 +1,167 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Construction HTML-5 Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="{% static 'site.webmanifest'  %}">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico'  %}">
+
+		<!-- CSS here -->
+            <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slicknav.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/animate.min.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slick.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/nice-select.css'  %}">
+            <link rel="stylesheet" href="{% static 'assets/css/style.css'  %}">
+   </head>
+
+   <body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'assets/img/logo/loder-logo.png'  %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+     <!-- Preloader Start -->
+     <header>
+        <!-- Header Start -->
+       <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-top d-none d-lg-block">
+                   <div class="container-fluid">
+                       <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left">
+                                    <ul>     
+                                        <li>+(123) 1234-567-8901</li>
+                                        <li>info@domain.com</li>
+                                        <li>Mon - Sat 8:00 - 17:30, Sunday - CLOSED</li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right">
+                                    <ul class="header-social">    
+                                        <li><a href="{% static '#'  %}"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="{% static '#'  %}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="{% static '#'  %}"><i class="fab fa-linkedin-in"></i></a></li>
+                                       <li> <a href="{% static '#'  %}"><i class="fab fa-google-plus-g"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+               <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2 col-md-1">
+                                <div class="logo">
+                                    <!-- logo-1 -->
+                                    <a href="{% static 'index.html'  %}" class="big-logo"><img src="{% static 'assets/img/logo/logo.png'  %}" alt=""></a>
+                                    <!-- logo-2 -->
+                                    <a href="{% static 'index.html'  %}" class="small-logo"><img src="{% static 'assets/img/logo/loder-logo.png'  %}" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-8">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">                                                                                                                   
+                                            <li><a href="{% static 'index.html'  %}">Home</a></li>
+                                            <li><a href="{% static 'project.html'  %}">Projects</a></li>
+                                            <li><a href="{% static 'services.html'  %}">Services</a></li>
+                                            {% if user.is_authenticated  %}
+                                            <li><p style="color:orange;"> Hello, {{user.first_name}} </p></li>
+                                            <li><a href='accounts/Logout'>Logout</a>
+                                            <li><a href='accounts/Profile_Edit'>Profile Edit</a></li>        
+                                            {% else %}
+                                            <li><a href='accounts/Login'>Account</a>
+                                                <ul class="submenu">
+                                                    <li><a href='accounts/Register'>Register</a></li>
+                                                    <li><a href='accounts/Login'>Login</a></li>
+                                                </ul>
+                                            </li>
+                                            {% endif %}
+                                            <li><a href='accounts/book'>GET A QUOTE</a>
+                                        
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>             
+                            <div class="col-xl-2 col-lg-2 col-md-3">
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="{% static '#'  %}" class="btn">Contact Now</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+       </div>
+   
+    </header>
+ 
+       {% block content %}
+
+       {% endblock %}
+       <!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js'  %}"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static './assets/js/vendor/jquery-1.12.4.min.js'  %}"></script>
+        <script src="{% static './assets/js/popper.min.js'  %}"></script>
+        <script src="{% static './assets/js/bootstrap.min.js'  %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static './assets/js/jquery.slicknav.min.js'  %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static './assets/js/owl.carousel.min.js'  %}"></script>
+        <script src="{% static './assets/js/slick.min.js'  %}"></script>
+        <!-- Date Picker -->
+        <script src="{% static './assets/js/gijgo.min.js'  %}"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static './assets/js/wow.min.js'  %}"></script>
+		<script src="{% static './assets/js/animated.headline.js'  %}"></script>
+        <script src="{% static './assets/js/jquery.magnific-popup.js'  %}"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="{% static './assets/js/jquery.scrollUp.min.js'  %}"></script>
+        <script src="{% static './assets/js/jquery.nice-select.min.js'  %}"></script>
+		<script src="{% static './assets/js/jquery.sticky.js'  %}"></script>
+               
+        <!-- counter , waypoint -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="{% static './assets/js/jquery.counterup.min.js'  %}"></script>
+
+        <!-- contact js -->
+        <script src="{% static './assets/js/contact.js'  %}"></script>
+        <script src="{% static './assets/js/jquery.form.js'  %}"></script>
+        <script src="{% static './assets/js/jquery.validate.min.js'  %}"></script>
+        <script src="{% static './assets/js/mail-script.js'  %}"></script>
+        <script src="{% static './assets/js/jquery.ajaxchimp.min.js'  %}"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="{% static './assets/js/plugins.js'  %}"></script>
+        <script src="{% static './assets/js/main.js'  %}"></script>
+       
+   </body>
+ </html>  

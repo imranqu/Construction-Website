@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\codess"
+		},
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\js_basic"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "js_basic"
+	}
+}

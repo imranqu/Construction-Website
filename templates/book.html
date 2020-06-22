@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load bootstrap3  %}
+
+{% block content %}
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+    <div class="container">
+    <h1 style="color: orange;"> Sayyed Constructions </h1>
+    <br>
+    <h4>Fill out our easy online form below and we'll get back to you in no time at all.</h4>
+    <form method="POST">
+        {% csrf_token %}
+        {%bootstrap_form form %}   
+      
+        <input type="Submit" value="submit">
+        <br><br>
+
+    </form> 
+        
+{% endblock %}
