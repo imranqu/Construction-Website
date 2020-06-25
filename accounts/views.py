@@ -25,7 +25,7 @@ def book(request):
         form.save()
         send_mail(
                         'Hie from your Website',
-                        'You have a new booking',
+                        'You have a new Enquiry',
                         'djangowolf007@gmail.com',
                         ['imranquadri14@gmail.com'],
                         fail_silently=False
@@ -36,11 +36,7 @@ def book(request):
 
 
 
-class Profile_Edit(LoginRequiredMixin,TemplateView):
-    form = forms.EditProfile
-    Profile_form = forms.ProfileForm
-    template_name = 'Profile_edit.html'
-
+class Profile_Edit(LoginRequiredMixin,View):
     
     def get(self,request):
         form =forms.EditProfile(instance=request.user)
